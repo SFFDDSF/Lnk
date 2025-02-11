@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+}
+.nav-list li {
+    margin-bottom: 10px;
+    display: block;
+}
+.nav-list li a {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 76px;
+    color: black;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 18px;
+}
+.nav-list li a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    background-image: url(/tutorials/css/image-sprites/icons.png);
+}
+#home::before { 
+    background-position: 0 0;
+}
+#edit::before {
+    background-position: 48px 0;
+}
+#settings::before {
+    background-position: 96px 0;
+}
+#support::before {
+    background-position: 144px 0;
+}
+        </style>
+    </head>
+    <body>
+        <ul class="nav-list">
+            <li><a id="home" href="#">Home</a></li>
+            <li><a id="edit" href="#">Account</a></li>
+            <li><a id="settings" href="#">Settings</a></li>
+            <li><a id="support" href="#">Support</a></li>
+        </ul>
+    </body>
+</html>
